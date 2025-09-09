@@ -15,7 +15,8 @@ if st.button("Calculate"):
     try:
         # Send request to Flask backend
         response = requests.post(
-            "http://127.0.0.1:5000/calculate",
+            API_URL = "https://cal-3iqk.onrender.com/calculate"
+,
             json={"num1": num1, "num2": num2, "operation": operation}
         )
 
@@ -27,3 +28,4 @@ if st.button("Calculate"):
 
     except Exception as e:
         st.error(f"Request failed: {e}")
+
